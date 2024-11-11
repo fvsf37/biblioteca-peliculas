@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= pelicula.titulo %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/detallesPelicula.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+    <div class="detalle-pelicula">
+      <h1 class="detalle-titulo"><%= pelicula.titulo %></h1>
+
+      <div class="detalle-info">
+        <img
+          src="<%= pelicula.imagen %>"
+          alt="<%= pelicula.titulo %>"
+          class="detalle-imagen"
+        />
+        <div class="detalle-texto">
+          <p class="detalle-genero">
+            <strong>Género:</strong> <%= pelicula.genero %>
+          </p>
+          <p class="detalle-ano"><strong>Año:</strong> <%= pelicula.año %></p>
+          <p class="detalle-director">
+            <strong>Director:</strong> <%= pelicula.director %>
+          </p>
+          <p class="detalle-descripcion">
+            <strong>Descripción:</strong> <%= pelicula.descripcion %>
+          </p>
+        </div>
+      </div>
+
+      <!-- Lista de copias de la película -->
+      <div class="detalle-copias">
+        <h2 class="detalle-copias-titulo">Copias Disponibles</h2>
+        <ul class="detalle-copias-lista">
+          <% if (copias.length > 0) { %> <% copias.forEach(copia => { %>
+          <li class="detalle-copia-item">
+            <p class="copia-usuario">
+              <strong>Usuario:</strong> <%= copia.usuario %>
+            </p>
+            <p class="copia-fecha">
+              <strong>Fecha Adquirida:</strong> <%= copia.fecha_adquirida %>
+            </p>
+            <p class="copia-estado">
+              <strong>Estado:</strong> <%= copia.estado %>
+            </p>
+            <p class="copia-formato">
+              <strong>Formato:</strong> <%= copia.formato %>
+            </p>
+          </li>
+          <% }) %> <% } else { %>
+          <p class="detalle-sin-copias">
+            No hay copias disponibles para esta película.
+          </p>
+          <% } %>
+        </ul>
+      </div>
+
+      <a href="/peliculas" class="button detalle-volver-boton"
+        >Volver al catálogo</a
+      >
+    </div>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+  </body>
+</html>

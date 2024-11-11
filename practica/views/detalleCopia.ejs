@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= pelicula.titulo %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/detalleCopia.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+    <!-- Sección de detalles de la copia de la película -->
+    <div class="copia-detalle">
+      <h1 class="copia-titulo"><%= pelicula.titulo %></h1>
+
+      <div class="copia-info">
+        <img
+          src="<%= pelicula.imagen %>"
+          alt="<%= pelicula.titulo %>"
+          class="copia-imagen"
+        />
+        <div class="copia-texto">
+          <p class="copia-genero">
+            <strong>Género:</strong> <%= pelicula.genero %>
+          </p>
+          <p class="copia-precio">
+            <strong>Precio:</strong> <%= pelicula.precio %> €
+          </p>
+          <p class="copia-director">
+            <strong>Director:</strong> <%= pelicula.director %>
+          </p>
+          <p class="copia-ano"><strong>Año:</strong> <%= pelicula.año %></p>
+          <p class="copia-duracion">
+            <strong>Duración:</strong> <%= pelicula.duracion %> minutos
+          </p>
+          <p class="copia-descripcion">
+            <strong>Descripción:</strong> <%= pelicula.descripcion %>
+          </p>
+          <a href="/peliculas" class="button copia-volver-boton"
+            >Volver al catálogo</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+  </body>
+</html>

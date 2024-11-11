@@ -1,0 +1,91 @@
+/* Contenedor principal de copias de usuario */
+.usuario-copias {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #21201e; /* Fondo oscuro */
+  color: #ebe8ff; /* Texto blanco */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título de copias de usuario */
+.usuario-copias-titulo {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #42ab47; /* Color primario */
+  text-align: center;
+}
+
+/* Catálogo de copias */
+.usuario-copias-catalogo {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Elemento individual de copia de usuario */
+.usuario-copia-item {
+  background-color: #ebe8ff; /* Fondo claro */
+  color: #21201e; /* Texto oscuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.usuario-copia-item:hover {
+  transform: scale(1.03);
+}
+
+/* Imagen de cada copia */
+.usuario-copia-imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Título de la copia */
+.usuario-copia-titulo {
+  font-size: 1.2em;
+  color: #42ab47; /* Color primario */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.usuario-copia-titulo:hover {
+  color: #003580; /* Cambiar a un tono más oscuro al pasar el ratón */
+}
+
+/* Descripción de la copia */
+.usuario-copia-descripcion {
+  font-size: 0.95em;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Botón de volver */
+.usuario-copias-volver {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #21201e; /* Texto oscuro */
+  background-color: #42ab47; /* Fondo verde */
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.usuario-copias-volver:hover {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #42ab47; /* Texto verde */
+}

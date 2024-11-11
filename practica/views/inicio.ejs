@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FilmTreasury - Inicio</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/inicio.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+    <!-- Contenido principal de la página de inicio -->
+    <main class="inicio-content">
+      <div class="inicio-container">
+        <h1 class="inicio-titulo">Bienvenido a FilmTreasury</h1>
+        <p class="inicio-descripcion">
+          FilmTreasury es una aplicación web donde los usuarios pueden explorar
+          y coleccionar sus películas favoritas. Encuentra información detallada
+          sobre una amplia gama de películas y mantén un registro de tus propias
+          copias.
+        </p>
+
+        <!-- Listado de películas recientes -->
+        <section class="inicio-peliculas">
+          <h2 class="inicio-subtitulo">Películas Recientes</h2>
+          <ul class="inicio-catalogo">
+            <% peliculas.forEach(pelicula => { %>
+            <li class="inicio-pelicula-item">
+              <img
+                src="<%= pelicula.imagen %>"
+                alt="<%= pelicula.titulo %>"
+                class="inicio-pelicula-imagen"
+              />
+              <a
+                href="/peliculas/<%= pelicula.id %>"
+                class="inicio-pelicula-titulo"
+                ><%= pelicula.titulo %></a
+              >
+              <p class="inicio-pelicula-descripcion">
+                <%= pelicula.descripcion %>
+              </p>
+              <p class="inicio-pelicula-fecha">
+                <small>Añadida el <%= pelicula.fecha_adquirida %></small>
+              </p>
+            </li>
+            <% }) %>
+          </ul>
+        </section>
+
+        <!-- Enlaces a Login y Contacto -->
+        <div class="inicio-navigation-links">
+          <a href="/login" class="inicio-button">Iniciar Sesión</a>
+          <a href="/contacto" class="inicio-button">Contacto</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+  </body>
+</html>

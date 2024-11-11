@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Copias de <%= usuario.nombre %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/copiasUsuario.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+    <div class="usuario-copias">
+      <h1 class="usuario-copias-titulo">
+        Copias de Películas de <%= usuario.nombre %>
+      </h1>
+
+      <ul class="usuario-copias-catalogo">
+        <% peliculas.forEach(pelicula => { %>
+        <li class="usuario-copia-item">
+          <img
+            src="<%= pelicula.imagen %>"
+            alt="<%= pelicula.titulo %>"
+            class="usuario-copia-imagen"
+          />
+          <a href="/copia/<%= pelicula.id %>" class="usuario-copia-titulo"
+            ><%= pelicula.titulo %></a
+          >
+          <p class="usuario-copia-descripcion"><%= pelicula.descripcion %></p>
+        </li>
+        <% }) %>
+      </ul>
+
+      <a href="/" class="button usuario-copias-volver">Volver al Inicio</a>
+    </div>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+/* Contenedor principal de la página de login */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #21201e; /* Fondo oscuro */
+  color: #ebe8ff; /* Texto blanco */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Título de la página de login */
+.container h1 {
+  font-size: 2em;
+  color: #42ab47; /* Color primario */
+  margin-bottom: 20px;
+}
+
+/* Formulario de inicio de sesión */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Grupo de formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Etiquetas del formulario */
+.form-group label {
+  font-size: 1em;
+  color: #ebe8ff;
+  margin-bottom: 5px;
+}
+
+/* Campos de entrada */
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  padding: 10px;
+  font-size: 1em;
+  color: #21201e; /* Texto oscuro */
+  background-color: #ebe8ff; /* Fondo claro */
+  border: none;
+  border-radius: 5px;
+}
+
+/* Estilos para el botón de enviar */
+.button {
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #42ab47; /* Color primario */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #2f8a35; /* Color más oscuro en hover */
+}
+
+/* Estilos para los enlaces de navegación */
+.navigation-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation-links a.button {
+  padding: 10px 15px;
+  font-size: 0.9em;
+  color: #21201e;
+  background-color: #ffffff;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navigation-links a.button:hover {
+  color: #ffffff;
+  background-color: #42ab47;
+}

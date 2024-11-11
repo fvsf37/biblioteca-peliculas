@@ -1,84 +1,124 @@
 {
-  "videojuegos": [
+  "peliculas": [
     {
       "id": 1,
-      "titulo": "The Legend of Zelda",
-      "genero": "Aventura",
-      "precio": 59.99,
-      "descripcion": "Una aventura épica en Hyrule.",
-      "imagen": "/images/zelda.jpg"
+      "titulo": "Citizen Kane",
+      "genero": "Drama",
+      "año": 1941,
+      "descripcion": "La vida del magnate de los periódicos Charles Foster Kane es contada a través de flashbacks.",
+      "imagen": "/images/citizen_kane.jpg"
     },
     {
       "id": 2,
-      "titulo": "Super Mario Odyssey",
-      "genero": "Plataformas",
-      "precio": 49.99,
-      "descripcion": "Una aventura de Mario a través de distintos mundos.",
-      "imagen": "/images/Super Mario Odyssey.jpg"
+      "titulo": "Casablanca",
+      "genero": "Romance",
+      "año": 1942,
+      "descripcion": "Un hombre debe elegir entre su amor por una mujer y ayudar a su marido a escapar de la ciudad.",
+      "imagen": "/images/casablanca.jpg"
     },
     {
       "id": 3,
-      "titulo": "Minecraft",
-      "genero": "Sandbox",
-      "precio": 26.95,
-      "descripcion": "Explora y construye en un mundo hecho de bloques.",
-      "imagen": "/images/Minecraft.jpg"
+      "titulo": "Gone with the Wind",
+      "genero": "Drama",
+      "año": 1939,
+      "descripcion": "La historia de amor entre Scarlett O'Hara y Rhett Butler en el sur de los EE.UU. durante la Guerra Civil.",
+      "imagen": "/images/gone_with_the_wind.jpg"
     },
     {
       "id": 4,
-      "titulo": "Fortnite",
-      "genero": "Battle Royale",
-      "precio": 79.99,
-      "descripcion": "Únete a la batalla en este juego gratuito de Battle Royale.",
-      "imagen": "/images/fortnite.jpg"
+      "titulo": "The Godfather",
+      "genero": "Crimen",
+      "año": 1972,
+      "descripcion": "La historia de la familia Corleone y su participación en el mundo del crimen organizado.",
+      "imagen": "/images/the_godfather.jpg"
     },
     {
       "id": 5,
-      "titulo": "God of War",
-      "genero": "Acción y aventura",
-      "precio": 39.99,
-      "descripcion": "Kratos se enfrenta a los dioses nórdicos en una épica aventura.",
-      "imagen": "/images/God Of War.jpg"
+      "titulo": "12 Angry Men",
+      "genero": "Drama",
+      "año": 1957,
+      "descripcion": "Doce jurados debaten la culpabilidad de un joven acusado de asesinato.",
+      "imagen": "/images/12_angry_men.jpg"
     },
     {
       "id": 6,
-      "titulo": "Cyberpunk 2077",
-      "genero": "RPG",
-      "precio": 59.99,
-      "descripcion": "Explora la ciudad de Night City en un futuro distópico.",
-      "imagen": "/images/Cyberpunk 2077.jpg"
+      "titulo": "Schindler's List",
+      "genero": "Drama",
+      "año": 1993,
+      "descripcion": "La historia de Oskar Schindler y su esfuerzo por salvar a judíos durante el Holocausto.",
+      "imagen": "/images/schindlers_list.jpg"
     },
     {
       "id": 7,
-      "titulo": "Animal Crossing: New Horizons",
-      "genero": "Simulación",
-      "precio": 49.99,
-      "descripcion": "Construye y personaliza tu isla en este relajante simulador.",
-      "imagen": "/images/Animal Crossing.jpg"
+      "titulo": "The Wizard of Oz",
+      "genero": "Fantasía",
+      "año": 1939,
+      "descripcion": "Dorothy y su perro Toto son transportados a la mágica tierra de Oz.",
+      "imagen": "/images/the_wizard_of_oz.jpg"
     },
     {
       "id": 8,
-      "titulo": "The Witcher 3: Wild Hunt",
-      "genero": "RPG",
-      "precio": 29.99,
-      "descripcion": "Embárcate en una misión épica como Geralt de Rivia.",
-      "imagen": "/images/The Witcher 3 Wild Hunt.jpg"
+      "titulo": "Psycho",
+      "genero": "Terror",
+      "año": 1960,
+      "descripcion": "Una secretaria se aloja en un motel de carretera regentado por un hombre con una personalidad oscura.",
+      "imagen": "/images/psycho.jpg"
     },
     {
       "id": 9,
-      "titulo": "Red Dead Redemption 2",
-      "genero": "Acción y aventura",
-      "precio": 59.99,
-      "descripcion": "Vive la vida de un forajido en el Viejo Oeste.",
-      "imagen": "/images/red_dead_redemption_2.jpg"
+      "titulo": "The Shawshank Redemption",
+      "genero": "Drama",
+      "año": 1994,
+      "descripcion": "Dos reclusos entablan una profunda amistad durante sus años en la prisión de Shawshank.",
+      "imagen": "/images/the_shawshank_redemption.jpg"
     },
     {
       "id": 10,
-      "titulo": "Halo Infinite",
-      "genero": "Shooter",
-      "precio": 59.99,
-      "descripcion": "La saga de Master Chief continúa en esta nueva entrega.",
-      "imagen": "/images/The Art of Halo Infinite.jpg"
+      "titulo": "Lawrence of Arabia",
+      "genero": "Aventura",
+      "año": 1962,
+      "descripcion": "La historia épica de T.E. Lawrence, un oficial británico que unió a las tribus árabes durante la Primera Guerra Mundial.",
+      "imagen": "/images/lawrence_of_arabia.jpg"
+    },
+    {
+      "id": 11,
+      "titulo": "Vertigo",
+      "genero": "Misterio",
+      "año": 1958,
+      "descripcion": "Un detective retirado con acrofobia investiga las extrañas actividades de la esposa de un amigo.",
+      "imagen": "/images/vertigo.jpg"
+    },
+    {
+      "id": 12,
+      "titulo": "The Good, the Bad and the Ugly",
+      "genero": "Western",
+      "año": 1966,
+      "descripcion": "Tres pistoleros buscan un tesoro en medio de la Guerra Civil estadounidense.",
+      "imagen": "/images/the_good_bad_ugly.jpg"
+    },
+    {
+      "id": 13,
+      "titulo": "Sunset Boulevard",
+      "genero": "Drama",
+      "año": 1950,
+      "descripcion": "La historia de una estrella de cine olvidada que sueña con volver a la gran pantalla.",
+      "imagen": "/images/sunset_boulevard.jpg"
+    },
+    {
+      "id": 14,
+      "titulo": "One Flew Over the Cuckoo's Nest",
+      "genero": "Drama",
+      "año": 1975,
+      "descripcion": "Un hombre finge estar loco para evitar la cárcel y termina enfrentándose a una enfermera tiránica.",
+      "imagen": "/images/one_flew_over_the_cuckoos_nest.jpg"
+    },
+    {
+      "id": 15,
+      "titulo": "Dr. Strangelove",
+      "genero": "Comedia",
+      "año": 1964,
+      "descripcion": "Una sátira sobre la Guerra Fría y la carrera nuclear entre los Estados Unidos y la Unión Soviética.",
+      "imagen": "/images/dr_strangelove.jpg"
     }
   ]
 }

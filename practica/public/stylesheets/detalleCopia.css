@@ -1,0 +1,79 @@
+/* Contenedor principal de detalles de la copia de la película */
+.copia-detalle {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #21201e; /* Fondo oscuro */
+  color: #ebe8ff; /* Texto blanco */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Título de la copia */
+.copia-titulo {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #42ab47; /* Color primario */
+}
+
+/* Información de la copia */
+.copia-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Imagen de la película */
+.copia-imagen {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor de texto */
+.copia-texto {
+  max-width: 600px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Estilos de cada línea de información */
+.copia-genero,
+.copia-precio,
+.copia-director,
+.copia-ano,
+.copia-duracion,
+.copia-descripcion {
+  font-size: 1em;
+  margin: 5px 0;
+  color: #ebe8ff; /* Texto blanco */
+}
+
+.copia-texto strong {
+  color: #42ab47; /* Color primario para los títulos de las propiedades */
+}
+
+/* Botón de volver */
+.copia-volver-boton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #21201e; /* Texto oscuro */
+  background-color: #42ab47; /* Fondo verde */
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.copia-volver-boton:hover {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #42ab47; /* Texto verde */
+}

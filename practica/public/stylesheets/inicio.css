@@ -1,0 +1,117 @@
+/* Contenedor principal de la página de inicio */
+.inicio-content {
+  padding: 40px 20px;
+  background-color: #21201e; /* Fondo oscuro */
+  color: #ebe8ff; /* Texto blanco */
+  text-align: center;
+}
+
+.inicio-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Título principal de la página */
+.inicio-titulo {
+  font-size: 2.5em;
+  color: #42ab47; /* Color primario */
+  margin-bottom: 20px;
+}
+
+/* Descripción de la página de inicio */
+.inicio-descripcion {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #ebe8ff;
+}
+
+/* Sección de películas recientes */
+.inicio-peliculas {
+  margin-top: 40px;
+}
+
+.inicio-subtitulo {
+  font-size: 1.8em;
+  color: #42ab47; /* Color primario */
+  margin-bottom: 20px;
+}
+
+/* Catálogo de películas */
+.inicio-catalogo {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Elemento individual de cada película */
+.inicio-pelicula-item {
+  background-color: #ebe8ff; /* Fondo claro */
+  color: #21201e; /* Texto oscuro */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.inicio-pelicula-item:hover {
+  transform: scale(1.05);
+}
+
+.inicio-pelicula-imagen {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Título de cada película */
+.inicio-pelicula-titulo {
+  font-size: 1.2em;
+  color: #42ab47; /* Color primario */
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.inicio-pelicula-titulo:hover {
+  color: #003580; /* Tono más oscuro en hover */
+}
+
+/* Descripción y fecha de cada película */
+.inicio-pelicula-descripcion {
+  font-size: 0.95em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.inicio-pelicula-fecha {
+  font-size: 0.85em;
+  color: #42ab47; /* Color primario */
+}
+
+/* Enlaces de navegación (Login y Contacto) */
+.inicio-navigation-links {
+  margin-top: 30px;
+}
+
+.inicio-button {
+  background-color: #42ab47; /* Fondo verde */
+  color: #ebe8ff; /* Texto blanco */
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.inicio-button:hover {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #42ab47; /* Texto verde */
+}

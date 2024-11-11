@@ -1,0 +1,57 @@
+/* Contenedor del catálogo */
+.catalogo-peliculas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Cuadrícula de 4 columnas ajustable */
+  gap: 20px;
+}
+
+/* Elemento individual de cada película */
+.pelicula-item {
+  background-color: #ebe8ff; /* Fondo claro */
+  color: #21201e; /* Texto oscuro */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.pelicula-item:hover {
+  transform: scale(1.05);
+}
+
+.pelicula-imagen {
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Título de cada película */
+.pelicula-titulo {
+  font-size: 1.2em;
+  color: #42ab47; /* Color primario */
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.pelicula-titulo:hover {
+  color: #003580; /* Tono más oscuro en hover */
+}
+
+/* Descripción de cada película */
+.pelicula-descripcion {
+  font-size: 0.95em;
+  color: #666;
+  margin: 5px 0;
+}

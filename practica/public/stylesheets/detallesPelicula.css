@@ -1,0 +1,124 @@
+/* Contenedor principal de detalles de la película */
+.detalle-pelicula {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #21201e; /* Fondo oscuro */
+  color: #ebe8ff; /* Texto blanco */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Título de la película */
+.detalle-titulo {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #42ab47; /* Color primario */
+  text-align: center;
+}
+
+/* Contenedor flexible para la imagen y los detalles */
+.detalle-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  text-align: left;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Estilo para la imagen de la película */
+.detalle-imagen {
+  width: 100%;
+  max-width: 250px; /* Ancho máximo de la imagen */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor para los detalles de la película */
+.detalle-texto {
+  max-width: 450px;
+  font-size: 1.1em;
+}
+
+/* Estilos de los detalles individuales */
+.detalle-genero,
+.detalle-ano,
+.detalle-director,
+.detalle-descripcion {
+  font-size: 1em;
+  margin: 8px 0;
+  color: #ebe8ff;
+}
+
+.detalle-texto strong {
+  color: #42ab47; /* Color primario para los títulos de los detalles */
+}
+
+/* Sección de copias disponibles */
+.detalle-copias {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #42ab47;
+}
+
+.detalle-copias-titulo {
+  font-size: 1.8em;
+  color: #42ab47;
+  margin-bottom: 15px;
+}
+
+/* Lista de copias */
+.detalle-copias-lista {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+/* Elemento individual de copia */
+.detalle-copia-item {
+  background-color: #ebe8ff; /* Fondo claro */
+  color: #21201e; /* Texto oscuro */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.copia-usuario,
+.copia-fecha,
+.copia-estado,
+.copia-formato {
+  font-size: 0.95em;
+  margin: 5px 0;
+}
+
+.detalle-sin-copias {
+  color: #ebe8ff;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Botón de volver */
+.detalle-volver-boton {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #21201e; /* Texto oscuro */
+  background-color: #42ab47; /* Fondo verde */
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.detalle-volver-boton:hover {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #42ab47; /* Texto verde */
+}

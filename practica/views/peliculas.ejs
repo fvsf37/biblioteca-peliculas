@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Catálogo de Películas</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/peliculas.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+    <!-- Contenido del catálogo de películas -->
+    <div class="container">
+      <h1>Catálogo de Películas</h1>
+      <ul class="catalogo-peliculas">
+        <% peliculas.forEach(pelicula => { %>
+        <li class="pelicula-item">
+          <img
+            src="<%= pelicula.imagen %>"
+            alt="<%= pelicula.titulo %>"
+            class="pelicula-imagen"
+          />
+          <a href="/peliculas/<%= pelicula.id %>" class="pelicula-titulo"
+            ><%= pelicula.titulo %></a
+          >
+          <p class="pelicula-descripcion"><%= pelicula.descripcion %></p>
+        </li>
+        <% }) %>
+      </ul>
+      <a href="/" class="button">Volver al Inicio</a>
+    </div>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+  </body>
+</html>
