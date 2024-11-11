@@ -2,50 +2,19 @@ const express = require("express");
 const router = express.Router();
 const dataProvider = require("../data/dataProvider.js");
 
+/* Middleware para verificar autenticación */
+function verificarAutenticacion(req, res, next) {
+  if (req.session && req.session.usuarioAutenticado) {
+    next(); // Usuario autenticado, continúa
+  } else {
+    res.redirect("/login"); // Redirige a login si no está autenticado
+  }
+}
+
 /* Página de Inicio */
 router.get("/", (req, res) => {
-  // Obtener las películas recientes, por ejemplo, las últimas 5
   const peliculas = dataProvider.getPeliculasRecientes(5);
   res.render("inicio", { peliculas });
-});
-
-/* Ruta para ver el catálogo de películas */
-router.get("/peliculas", (req, res) => {
-  const peliculas = dataProvider.getAllPeliculas();
-  res.render("peliculas", { peliculas });
-});
-
-/* Ruta para ver los detalles de una película específica */
-router.get("/peliculas/:id", (req, res) => {
-  const pelicula = dataProvider.getPeliculaById(req.params.id);
-  if (!pelicula) {
-    return res.status(404).send("Película no encontrada");
-  }
-  const copias = dataProvider.getCopiasByPeliculaId(req.params.id);
-  res.render("detallePelicula", { pelicula, copias });
-});
-
-/* Ruta para ver las copias de películas de un usuario específico */
-router.get("/copias/:id", (req, res) => {
-  const usuario = dataProvider.getUsuarioById(req.params.id);
-  if (!usuario) {
-    return res.status(404).send("Usuario no encontrado");
-  }
-
-  // Filtramos las películas que el usuario posee usando pelicula_id
-  const peliculas = usuario.copias.map((copia) =>
-    dataProvider.getPeliculaById(copia.pelicula_id)
-  );
-  res.render("copiasUsuario", { usuario, peliculas });
-});
-
-/* Ruta para ver los detalles de una copia específica de una película */
-router.get("/copia/:id", (req, res) => {
-  const pelicula = dataProvider.getPeliculaById(req.params.id);
-  if (!pelicula) {
-    return res.status(404).send("Película no encontrada");
-  }
-  res.render("detalleCopia", { pelicula });
 });
 
 /* Ruta para la página de login (GET) */
@@ -57,20 +26,66 @@ router.get("/login", (req, res) => {
 router.post("/login", (req, res) => {
   const { username, password } = req.body;
 
-  // Aquí podrías agregar lógica para verificar el usuario y la contraseña
-  if (username && password) {
-    res.send(`Bienvenido, ${username}!`); // Mensaje de bienvenida temporal
+  if (dataProvider.validarCredenciales(username, password)) {
+    req.session.usuarioAutenticado = username; // Almacena el usuario en la sesión
+    res.redirect("/peliculas"); // Redirige al catálogo si el login es correcto
   } else {
-    res.redirect("/login"); // Redirige de nuevo a login si falta información
+    res.render("login", { error: "Credenciales incorrectas" });
   }
 });
 
-/* Ruta para la página de contacto (GET) */
+/* Ruta para cerrar sesión */
+router.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.send("Error al cerrar sesión");
+    }
+    res.redirect("/login");
+  });
+});
+
+/* Rutas protegidas */
+router.get("/peliculas", verificarAutenticacion, (req, res) => {
+  const peliculas = dataProvider.getAllPeliculas();
+  res.render("peliculas", { peliculas });
+});
+
+router.get("/peliculas/:id", verificarAutenticacion, (req, res) => {
+  const pelicula = dataProvider.getPeliculaById(req.params.id);
+  if (!pelicula) {
+    return res.status(404).send("Película no encontrada");
+  }
+  const copias = dataProvider.getCopiasByPeliculaId(req.params.id);
+  res.render("detallePelicula", { pelicula, copias });
+});
+
+/* Ruta para ver las copias de películas de un usuario específico */
+router.get("/copias/:id", verificarAutenticacion, (req, res) => {
+  const usuario = dataProvider.getUsuarioById(req.params.id);
+  if (!usuario) {
+    return res.status(404).send("Usuario no encontrado");
+  }
+
+  const peliculas = usuario.copias.map((copia) =>
+    dataProvider.getPeliculaById(copia.pelicula_id)
+  );
+  res.render("copiasUsuario", { usuario, peliculas });
+});
+
+/* Ruta para ver los detalles de una copia específica de una película */
+router.get("/copia/:id", verificarAutenticacion, (req, res) => {
+  const pelicula = dataProvider.getPeliculaById(req.params.id);
+  if (!pelicula) {
+    return res.status(404).send("Película no encontrada");
+  }
+  res.render("detalleCopia", { pelicula });
+});
+
+/* Ruta para la página de contacto */
 router.get("/contacto", (req, res) => {
   res.render("contacto");
 });
 
-/* Ruta para el procesamiento del formulario de contacto (POST) */
 router.post("/contacto", (req, res) => {
   const { name, email, message } = req.body;
   if (name && email && message) {
@@ -78,6 +93,26 @@ router.post("/contacto", (req, res) => {
   } else {
     res.redirect("/contacto");
   }
+});
+
+router.post("/login", (req, res) => {
+  const { username, password } = req.body;
+
+  if (dataProvider.validarCredenciales(username, password)) {
+    req.session.usuarioAutenticado = username; // Guarda el nombre de usuario en la sesión
+    res.redirect("/peliculas"); // Redirige al catálogo si el login es correcto
+  } else {
+    res.render("login", { error: "Credenciales incorrectas" });
+  }
+});
+
+router.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.send("Error al cerrar sesión");
+    }
+    res.redirect("/login");
+  });
 });
 
 module.exports = router;

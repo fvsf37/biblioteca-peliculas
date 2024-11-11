@@ -1,51 +1,55 @@
 {
     "usuarios": [
         {
-            "id": 1,
-            "nombre": "Juan Pérez",
-            "email": "juan.perez@example.com",
+            "username": "user1",
+            "password": "pass1",
             "copias": [
                 {
                     "pelicula_id": 1,
-                    "fecha_adquirida": "2023-01-15",
-                    "estado": "nuevo",
-                    "formato": "DVD"
-                },
-                {
-                    "pelicula_id": 3,
-                    "fecha_adquirida": "2023-02-10",
-                    "estado": "usado",
+                    "fecha_adquirida": "2023-01-10",
+                    "estado": "Buena",
                     "formato": "Blu-ray"
                 },
                 {
-                    "pelicula_id": 5,
-                    "fecha_adquirida": "2023-03-05",
-                    "estado": "nuevo",
-                    "formato": "Digital"
+                    "pelicula_id": 2,
+                    "fecha_adquirida": "2023-02-15",
+                    "estado": "Excelente",
+                    "formato": "DVD"
                 }
             ]
         },
         {
-            "id": 2,
-            "nombre": "Ana Gómez",
-            "email": "ana.gomez@example.com",
+            "username": "user2",
+            "password": "pass2",
             "copias": [
                 {
-                    "pelicula_id": 2,
-                    "fecha_adquirida": "2023-01-20",
-                    "estado": "usado",
-                    "formato": "DVD"
+                    "pelicula_id": 3,
+                    "fecha_adquirida": "2023-03-20",
+                    "estado": "Aceptable",
+                    "formato": "Digital"
                 },
                 {
                     "pelicula_id": 4,
-                    "fecha_adquirida": "2023-03-11",
-                    "estado": "nuevo",
+                    "fecha_adquirida": "2023-04-05",
+                    "estado": "Buena",
                     "formato": "Blu-ray"
+                }
+            ]
+        },
+        {
+            "username": "user3",
+            "password": "pass3",
+            "copias": [
+                {
+                    "pelicula_id": 1,
+                    "fecha_adquirida": "2023-05-18",
+                    "estado": "Nueva",
+                    "formato": "DVD"
                 },
                 {
-                    "pelicula_id": 6,
-                    "fecha_adquirida": "2023-04-07",
-                    "estado": "nuevo",
+                    "pelicula_id": 5,
+                    "fecha_adquirida": "2023-06-22",
+                    "estado": "Buena",
                     "formato": "Digital"
                 }
             ]

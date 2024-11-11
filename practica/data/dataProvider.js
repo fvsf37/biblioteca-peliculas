@@ -1,81 +1,79 @@
-const peliculasData = require("./data.json");
-const usuariosData = require("./usuarios.json");
+const fs = require("fs");
+const path = require("path");
 
-// Función para obtener todas las películas
+// Cargar datos de películas
+const peliculasData = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "data.json"), "utf-8")
+);
+// Cargar datos de usuarios
+const usuariosData = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "usuarios.json"), "utf-8")
+);
+
+/* Obtener todas las películas */
 function getAllPeliculas() {
-  return peliculasData.peliculas || []; // Asegúrate de que devuelve un array
+  return peliculasData.peliculas || [];
 }
 
-// Función para obtener una película por ID
+/* Obtener película por ID */
 function getPeliculaById(id) {
-  // Verifica que peliculasData.peliculas esté definido
-  if (!peliculasData || !peliculasData.peliculas) {
-    console.error("El array de películas no está definido en peliculasData");
-    return null; // O lanza un error según el caso
-  }
-  return peliculasData.peliculas.find((pelicula) => pelicula.id == id);
+  return peliculasData.peliculas.find(
+    (pelicula) => pelicula.id === parseInt(id)
+  );
 }
 
-// Función para obtener todas las copias de una película específica
+/* Validar credenciales del usuario */
+function validarCredenciales(username, password) {
+  const usuario = usuariosData.usuarios.find(
+    (user) => user.username === username && user.password === password
+  );
+  return usuario !== undefined;
+}
+
+/* Obtener usuario por ID */
+function getUsuarioById(id) {
+  return usuariosData.usuarios.find((usuario) => usuario.id === parseInt(id));
+}
+
+/* Obtener usuario por nombre de usuario */
+function getUsuarioByUsername(username) {
+  return usuariosData.usuarios.find((usuario) => usuario.username === username);
+}
+
+/* Obtener las copias de películas de un usuario específico */
+function getCopiasByUsuarioId(id) {
+  const usuario = getUsuarioById(id);
+  return usuario ? usuario.copias : [];
+}
+
+/* Obtener copias de una película específica por ID */
 function getCopiasByPeliculaId(peliculaId) {
-  let copias = [];
+  const copias = [];
   usuariosData.usuarios.forEach((usuario) => {
-    const copiasUsuario = usuario.copias.filter(
-      (copia) => copia.pelicula_id == peliculaId
-    );
-    copiasUsuario.forEach((copia) => {
-      copias.push({
-        usuario: usuario.nombre,
-        fecha_adquirida: copia.fecha_adquirida,
-        estado: copia.estado,
-        formato: copia.formato,
-      });
+    usuario.copias.forEach((copia) => {
+      if (copia.pelicula_id === parseInt(peliculaId)) {
+        copias.push({
+          ...copia,
+          usuario: usuario.username,
+        });
+      }
     });
   });
   return copias;
 }
 
-// Función para obtener las películas recientes (últimas añadidas por los usuarios)
-function getPeliculasRecientes(limit) {
-  let peliculasRecientes = [];
-  const peliculasMap = {};
-
-  // Recorrer los usuarios y sus copias para encontrar las películas más recientes
-  usuariosData.usuarios.forEach((usuario) => {
-    usuario.copias.forEach((copia) => {
-      const pelicula = getPeliculaById(copia.pelicula_id);
-      if (pelicula && !peliculasMap[copia.pelicula_id]) {
-        peliculasMap[copia.pelicula_id] = {
-          ...pelicula,
-          fecha_adquirida: copia.fecha_adquirida,
-        };
-      }
-    });
-  });
-
-  // Ordenar por fecha y limitar los resultados
-  peliculasRecientes = Object.values(peliculasMap)
-    .sort((a, b) => new Date(b.fecha_adquirida) - new Date(a.fecha_adquirida))
-    .slice(0, limit);
-
-  return peliculasRecientes;
-}
-
-// Función para obtener todos los usuarios
-function getAllUsuarios() {
-  return usuariosData.usuarios;
-}
-
-// Función para obtener un usuario por ID
-function getUsuarioById(id) {
-  return usuariosData.usuarios.find((usuario) => usuario.id == id);
+/* Obtener las películas recientes */
+function getPeliculasRecientes(limit = 5) {
+  return peliculasData.peliculas.slice(-limit).reverse(); // Devuelve las últimas películas agregadas
 }
 
 module.exports = {
   getAllPeliculas,
   getPeliculaById,
+  validarCredenciales,
+  getUsuarioById,
+  getUsuarioByUsername,
+  getCopiasByUsuarioId,
   getCopiasByPeliculaId,
   getPeliculasRecientes,
-  getAllUsuarios,
-  getUsuarioById,
 };
