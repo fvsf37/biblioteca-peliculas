@@ -3,8 +3,8 @@
   max-width: 900px;
   margin: 40px auto;
   padding: 40px;
-  background-color: #21201e; /* Fondo oscuro */
-  color: #ebe8ff; /* Texto blanco */
+  background-color: #21201e;
+  color: #ebe8ff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -14,7 +14,7 @@
 .detalle-titulo {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
   text-align: center;
 }
 
@@ -32,7 +32,7 @@
 /* Estilo para la imagen de la película */
 .detalle-imagen {
   width: 100%;
-  max-width: 250px; /* Ancho máximo de la imagen */
+  max-width: 250px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -54,7 +54,7 @@
 }
 
 .detalle-texto strong {
-  color: #42ab47; /* Color primario para los títulos de los detalles */
+  color: #42ab47;
 }
 
 /* Sección de copias disponibles */
@@ -81,8 +81,8 @@
 
 /* Elemento individual de copia */
 .detalle-copia-item {
-  background-color: #ebe8ff; /* Fondo claro */
-  color: #21201e; /* Texto oscuro */
+  background-color: #ebe8ff;
+  color: #21201e;
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -110,8 +110,8 @@
   padding: 12px 25px;
   font-size: 1em;
   font-weight: bold;
-  color: #21201e; /* Texto oscuro */
-  background-color: #42ab47; /* Fondo verde */
+  color: #21201e;
+  background-color: #42ab47;
   border: none;
   border-radius: 25px;
   text-decoration: none;
@@ -119,6 +119,6 @@
 }
 
 .detalle-volver-boton:hover {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #42ab47; /* Texto verde */
+  background-color: #ffffff;
+  color: #42ab47;
 }

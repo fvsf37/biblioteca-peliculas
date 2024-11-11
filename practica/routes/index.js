@@ -5,9 +5,9 @@ const dataProvider = require("../data/dataProvider.js");
 /* Middleware para verificar autenticación */
 function verificarAutenticacion(req, res, next) {
   if (req.session && req.session.usuarioAutenticado) {
-    next(); // Usuario autenticado, continúa
+    next();
   } else {
-    res.redirect("/login"); // Redirige a login si no está autenticado
+    res.redirect("/login");
   }
 }
 
@@ -27,8 +27,8 @@ router.post("/login", (req, res) => {
   const { username, password } = req.body;
 
   if (dataProvider.validarCredenciales(username, password)) {
-    req.session.usuarioAutenticado = username; // Almacena el usuario en la sesión
-    res.redirect("/peliculas"); // Redirige al catálogo si el login es correcto
+    req.session.usuarioAutenticado = username;
+    res.redirect("/peliculas");
   } else {
     res.render("login", { error: "Credenciales incorrectas" });
   }
@@ -99,8 +99,8 @@ router.post("/login", (req, res) => {
   const { username, password } = req.body;
 
   if (dataProvider.validarCredenciales(username, password)) {
-    req.session.usuarioAutenticado = username; // Guarda el nombre de usuario en la sesión
-    res.redirect("/peliculas"); // Redirige al catálogo si el login es correcto
+    req.session.usuarioAutenticado = username;
+    res.redirect("/peliculas");
   } else {
     res.render("login", { error: "Credenciales incorrectas" });
   }

@@ -3,8 +3,8 @@
   max-width: 500px;
   margin: 50px auto;
   padding: 40px;
-  background-color: #21201e; /* Fondo oscuro */
-  color: #ebe8ff; /* Texto blanco */
+  background-color: #21201e;
+  color: #ebe8ff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -13,7 +13,7 @@
 /* Título de la página de login */
 .container h1 {
   font-size: 2em;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
   margin-bottom: 20px;
 }
 
@@ -43,8 +43,8 @@
 .form-group input[type="password"] {
   padding: 10px;
   font-size: 1em;
-  color: #21201e; /* Texto oscuro */
-  background-color: #ebe8ff; /* Fondo claro */
+  color: #21201e;
+  background-color: #ebe8ff;
   border: none;
   border-radius: 5px;
 }
@@ -55,7 +55,7 @@
   font-size: 1em;
   font-weight: bold;
   color: #ffffff;
-  background-color: #42ab47; /* Color primario */
+  background-color: #42ab47;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -63,7 +63,7 @@
 }
 
 .button:hover {
-  background-color: #2f8a35; /* Color más oscuro en hover */
+  background-color: #2f8a35;
 }
 
 /* Estilos para los enlaces de navegación */

@@ -8,8 +8,8 @@
 /* Estilos globales */
 body {
   font-family: "Prosto One", sans-serif;
-  background-color: #21201e; /* Color de fondo */
-  color: #ebe8ff; /* Color de texto */
+  background-color: #21201e;
+  color: #ebe8ff;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ body {
 
 /* Header */
 .navbar {
-  background-color: #42ab47; /* Color primario */
+  background-color: #42ab47;
   padding: 10px 20px;
 }
 
@@ -37,15 +37,15 @@ body {
   margin: 0 auto;
 }
 
-/* Estilos para la marca (logo y nombre) */
+/* Estilos para la marca */
 .navbar-brand {
   display: flex;
   align-items: center;
   font-size: 1.5em;
   font-weight: bold;
-  color: #21201e; /* Texto oscuro */
+  color: #21201e;
   text-decoration: none;
-  gap: 10px; /* Espacio entre el logo y el texto */
+  gap: 10px;
 }
 
 .navbar-logo {
@@ -67,7 +67,7 @@ body {
 }
 
 .navbar-link {
-  color: #ebe8ff; /* Texto blanco */
+  color: #ebe8ff;
   text-decoration: none;
   font-size: 1em;
   font-weight: 600;
@@ -77,8 +77,8 @@ body {
 }
 
 .navbar-link:hover {
-  background-color: #ffffff; /* Fondo blanco al pasar el ratón */
-  color: #42ab47; /* Texto en color primario */
+  background-color: #ffffff;
+  color: #42ab47;
 }
 
 /* Saludo del usuario */
@@ -91,8 +91,8 @@ body {
 
 /* Botones generales */
 .button {
-  background-color: #42ab47; /* Color primario */
-  color: #ebe8ff; /* Texto blanco */
+  background-color: #42ab47;
+  color: #ebe8ff;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 25px;
@@ -102,13 +102,13 @@ body {
 }
 
 .button:hover {
-  background-color: #ffffff; /* Fondo blanco al pasar el ratón */
-  color: #42ab47; /* Texto en color primario */
+  background-color: #ffffff;
+  color: #42ab47;
 }
 
 /* Footer */
 .footer {
-  background-color: #42ab47; /* Color de fondo del footer */
+  background-color: #42ab47;
   color: #ffffff;
   text-align: center;
   padding: 20px;
@@ -129,11 +129,11 @@ body {
 }
 
 .social-icon {
-  width: 30px; /* Ajusta el tamaño del icono según lo que necesites */
+  width: 30px;
   height: auto;
   transition: transform 0.3s;
 }
 
 .social-icon:hover {
-  transform: scale(1.1); /* Agranda el icono ligeramente al pasar el mouse */
+  transform: scale(1.1);
 }

@@ -3,8 +3,8 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-color: #21201e; /* Fondo oscuro */
-  color: #ebe8ff; /* Texto blanco */
+  background-color: #21201e;
+  color: #ebe8ff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -14,7 +14,7 @@
 .contacto-titulo {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
 }
 
 /* Descripción de la página de contacto */
@@ -51,9 +51,9 @@
   width: 100%;
   padding: 10px;
   font-size: 1em;
-  color: #21201e; /* Texto oscuro */
-  background-color: #ebe8ff; /* Fondo claro */
-  border: 2px solid #42ab47; /* Color primario */
+  color: #21201e;
+  background-color: #ebe8ff;
+  border: 2px solid #42ab47;
   border-radius: 5px;
 }
 
@@ -64,8 +64,8 @@
 
 /* Botón de envío del formulario */
 .contacto-boton-enviar {
-  background-color: #42ab47; /* Fondo verde */
-  color: #21201e; /* Texto oscuro */
+  background-color: #42ab47;
+  color: #21201e;
   padding: 12px 20px;
   font-size: 1em;
   font-weight: bold;
@@ -76,8 +76,8 @@
 }
 
 .contacto-boton-enviar:hover {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #42ab47; /* Texto verde */
+  background-color: #ffffff;
+  color: #42ab47;
 }
 
 /* Enlaces de navegación */
@@ -86,8 +86,8 @@
 }
 
 .contacto-boton {
-  background-color: #42ab47; /* Fondo verde */
-  color: #ebe8ff; /* Texto blanco */
+  background-color: #42ab47;
+  color: #ebe8ff;
   padding: 10px 15px;
   font-weight: bold;
   border-radius: 25px;
@@ -97,6 +97,6 @@
 }
 
 .contacto-boton:hover {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #42ab47; /* Texto verde */
+  background-color: #ffffff;
+  color: #42ab47;
 }

@@ -1,8 +1,8 @@
 /* Contenedor principal de la página de inicio */
 .inicio-content {
   padding: 40px 20px;
-  background-color: #21201e; /* Fondo oscuro */
-  color: #ebe8ff; /* Texto blanco */
+  background-color: #21201e;
+  color: #ebe8ff;
   text-align: center;
 }
 
@@ -14,7 +14,7 @@
 /* Título principal de la página */
 .inicio-titulo {
   font-size: 2.5em;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
   margin-bottom: 20px;
 }
 
@@ -32,7 +32,7 @@
 
 .inicio-subtitulo {
   font-size: 1.8em;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
   margin-bottom: 20px;
 }
 
@@ -47,8 +47,8 @@
 
 /* Elemento individual de cada película */
 .inicio-pelicula-item {
-  background-color: #ebe8ff; /* Fondo claro */
-  color: #21201e; /* Texto oscuro */
+  background-color: #ebe8ff;
+  color: #21201e;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
@@ -71,7 +71,7 @@
 /* Título de cada película */
 .inicio-pelicula-titulo {
   font-size: 1.2em;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
   font-weight: bold;
   text-decoration: none;
   display: block;
@@ -80,7 +80,7 @@
 }
 
 .inicio-pelicula-titulo:hover {
-  color: #003580; /* Tono más oscuro en hover */
+  color: #003580;
 }
 
 /* Descripción y fecha de cada película */
@@ -92,17 +92,17 @@
 
 .inicio-pelicula-fecha {
   font-size: 0.85em;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
 }
 
-/* Enlaces de navegación (Login y Contacto) */
+/* Enlaces de navegación */
 .inicio-navigation-links {
   margin-top: 30px;
 }
 
 .inicio-button {
-  background-color: #42ab47; /* Fondo verde */
-  color: #ebe8ff; /* Texto blanco */
+  background-color: #42ab47;
+  color: #ebe8ff;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 25px;
@@ -112,6 +112,6 @@
 }
 
 .inicio-button:hover {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #42ab47; /* Texto verde */
+  background-color: #ffffff;
+  color: #42ab47;
 }

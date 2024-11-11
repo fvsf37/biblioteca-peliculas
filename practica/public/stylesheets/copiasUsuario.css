@@ -3,8 +3,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-color: #21201e; /* Fondo oscuro */
-  color: #ebe8ff; /* Texto blanco */
+  background-color: #21201e;
+  color: #ebe8ff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -13,7 +13,7 @@
 .usuario-copias-titulo {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
   text-align: center;
 }
 
@@ -28,8 +28,8 @@
 
 /* Elemento individual de copia de usuario */
 .usuario-copia-item {
-  background-color: #ebe8ff; /* Fondo claro */
-  color: #21201e; /* Texto oscuro */
+  background-color: #ebe8ff;
+  color: #21201e;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   padding: 15px;
@@ -53,14 +53,14 @@
 /* Título de la copia */
 .usuario-copia-titulo {
   font-size: 1.2em;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .usuario-copia-titulo:hover {
-  color: #003580; /* Cambiar a un tono más oscuro al pasar el ratón */
+  color: #003580;
 }
 
 /* Descripción de la copia */
@@ -77,8 +77,8 @@
   padding: 12px 25px;
   font-size: 1em;
   font-weight: bold;
-  color: #21201e; /* Texto oscuro */
-  background-color: #42ab47; /* Fondo verde */
+  color: #21201e;
+  background-color: #42ab47;
   border: none;
   border-radius: 25px;
   text-decoration: none;
@@ -86,6 +86,6 @@
 }
 
 .usuario-copias-volver:hover {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #42ab47; /* Texto verde */
+  background-color: #ffffff;
+  color: #42ab47;
 }

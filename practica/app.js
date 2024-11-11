@@ -26,10 +26,10 @@ app.set("view engine", "ejs");
 // Configuración de sesión
 app.use(
   session({
-    secret: "mySecretKey", // Cambia esta clave por una clave secreta más segura
+    secret: "mySecretKey",
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }, // Usa secure: true si estás en HTTPS
+    cookie: { secure: false },
   })
 );
 
@@ -65,18 +65,14 @@ app.use(function (err, req, res, next) {
 // Define la única ruta principal
 app.use("/", indexRouter);
 
-// catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
 app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
-
-  // render the error page
   res.status(err.status || 500);
   res.render("error");
 });

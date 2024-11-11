@@ -3,8 +3,8 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-color: #21201e; /* Fondo oscuro */
-  color: #ebe8ff; /* Texto blanco */
+  background-color: #21201e;
+  color: #ebe8ff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -14,7 +14,7 @@
 .copia-titulo {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #42ab47; /* Color primario */
+  color: #42ab47;
 }
 
 /* Información de la copia */
@@ -51,11 +51,11 @@
 .copia-descripcion {
   font-size: 1em;
   margin: 5px 0;
-  color: #ebe8ff; /* Texto blanco */
+  color: #ebe8ff;
 }
 
 .copia-texto strong {
-  color: #42ab47; /* Color primario para los títulos de las propiedades */
+  color: #42ab47;
 }
 
 /* Botón de volver */
@@ -65,8 +65,8 @@
   padding: 12px 25px;
   font-size: 1em;
   font-weight: bold;
-  color: #21201e; /* Texto oscuro */
-  background-color: #42ab47; /* Fondo verde */
+  color: #21201e;
+  background-color: #42ab47;
   border: none;
   border-radius: 25px;
   text-decoration: none;
@@ -74,6 +74,6 @@
 }
 
 .copia-volver-boton:hover {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #42ab47; /* Texto verde */
+  background-color: #ffffff;
+  color: #42ab47;
 }

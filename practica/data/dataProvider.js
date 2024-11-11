@@ -64,7 +64,7 @@ function getCopiasByPeliculaId(peliculaId) {
 
 /* Obtener las películas recientes */
 function getPeliculasRecientes(limit = 5) {
-  return peliculasData.peliculas.slice(-limit).reverse(); // Devuelve las últimas películas agregadas
+  return peliculasData.peliculas.slice(-limit).reverse();
 }
 
 module.exports = {
