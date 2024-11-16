@@ -2,6 +2,25 @@
 
 Un sistema de gestión de películas donde los usuarios pueden explorar, consultar detalles y gestionar copias físicas o digitales.
 
+## 📖 **Índice**
+
+1. [Introducción](#-biblioteca-de-películas)
+2. [Tecnologías Usadas](#️-tecnologías-usadas)
+3. [Guía de Estilo](#-guía-de-estilo)
+   - [Principios de Diseño](#-principios-de-diseño)
+   - [Esquema de Colores](#-esquema-de-colores)
+   - [Tipografía](#-tipografía)
+   - [Estilo por Páginas](#-estilo-por-páginas)
+   - [Interacción del Usuario](#-interacción-del-usuario)
+4. [Historias de Usuario](#-historias-de-usuario)
+   - [Gestión de Películas](#-gestión-de-películas)
+   - [Gestión de Copias](#-gestión-de-copias)
+   - [Autenticación y Registro](#-autenticación-y-registro)
+   - [Contacto](#-contacto)
+   - [Escenarios Especiales](#-escenarios-especiales)
+5. [Cómo Empezar](#-cómo-empezar)
+6. [Créditos](#-créditos)
+
 ---
 
 ## 🛠️ **Tecnologías Usadas**
@@ -86,15 +105,6 @@ Un sistema de gestión de películas donde los usuarios pueden explorar, consult
 
 ---
 
-### 🛠️ **Mejores Prácticas**
-
-1. **Enfoque en la Legibilidad**: Asegúrate de que todos los textos sean claramente visibles, incluso para usuarios con dificultades visuales.
-2. **Compatibilidad Responsive**: Diseña pensando en diferentes tamaños de pantalla, desde dispositivos móviles hasta monitores grandes.
-3. **Jerarquía Visual Clara**: Usa tamaños de texto, colores y espaciado para guiar al usuario a través de la información más importante.
-4. **Consistencia en Estilo**: Aplica los mismos esquemas de diseño en todas las páginas para reforzar la identidad visual de la aplicación.
-
----
-
 ## 👥 **Historias de Usuario**
 
 ### 📂 **Gestión de Películas**
@@ -169,12 +179,6 @@ Un sistema de gestión de películas donde los usuarios pueden explorar, consult
 
 ### 🎯 **Escenarios Especiales**
 
-#### **Película no Disponible**
-
-- **Como** usuario autenticado,
-- **Quiero** recibir un mensaje claro cuando intento acceder a una película que no existe en el sistema,
-- **Para** entender que el contenido no está disponible y evitar confusiones.
-
 #### **Credenciales Incorrectas**
 
 - **Como** visitante,
@@ -207,30 +211,6 @@ npm start
 ### 4️⃣ **Abrir en el Navegador**
 
 [http://localhost:3000](http://localhost:3000)
-
----
-
-## 📂 **Estructura del Proyecto**
-
-```
-biblioteca-peliculas/
-├── data/
-│   ├── data.json
-│   ├── usuarios.json
-├── public/
-│   ├── images/
-│   ├── stylesheets/
-├── routes/
-│   ├── index.js
-├── views/
-│   ├── partials/
-│   ├── contacto.ejs
-│   ├── peliculas.ejs
-│   ├── detallePelicula.ejs
-│   ├── ...
-├── app.js
-├── package.json
-```
 
 ---
 
