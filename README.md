@@ -1,5 +1,3 @@
-Aquí tienes un ejemplo de un archivo `README.md` bien estructurado y visualmente atractivo para tu proyecto. Incluye una guía de estilo y las historias de usuario:
-
 ---
 
 # 🎬 **Biblioteca de Películas**
