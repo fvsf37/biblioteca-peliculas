@@ -1,5 +1,3 @@
----
-
 # 🎬 **Biblioteca de Películas**
 
 Un sistema de gestión de películas donde los usuarios pueden explorar, consultar detalles y gestionar copias físicas o digitales.
