@@ -45,40 +45,72 @@ Un sistema de gestión de películas donde los usuarios pueden explorar, consult
 ## 👥 **Historias de Usuario**
 
 ### 📂 **Gestión de Películas**
+#### **Ver Listado de Películas**
+- **Como** usuario autenticado,  
+- **Quiero** explorar una lista completa de películas disponibles en el sistema,  
+- **Para** descubrir opciones interesantes que pueda añadir a mi colección personal o consultar sus detalles.
 
-- **Como** usuario autenticado
-- **Quiero** ver un listado de todas las películas disponibles
-- **Para** elegir cuáles me interesan.
+#### **Consultar Detalles de una Película**
+- **Como** usuario autenticado o visitante,  
+- **Quiero** acceder a la página de detalles de una película específica,  
+- **Para** conocer su información completa (título, género, año, descripción, y copias disponibles).
 
-- **Como** usuario
-- **Quiero** acceder a los detalles de una película específica
-- **Para** obtener información como género, año, descripción, etc.
+#### **Explorar Películas Recientes**
+- **Como** usuario autenticado o visitante,  
+- **Quiero** ver una sección destacada en la página de inicio con las películas más recientes,  
+- **Para** mantenerme informado de las últimas novedades.
+
+---
 
 ### 💾 **Gestión de Copias**
+#### **Consultar Mis Copias**
+- **Como** usuario autenticado,  
+- **Quiero** ver una lista de las copias de películas que poseo,  
+- **Para** llevar un control de mi colección personal, incluyendo su estado y formato.
 
-- **Como** usuario autenticado
-- **Quiero** ver las copias de películas que poseo
-- **Para** mantener un registro de mi colección.
+#### **Consultar las Copias de una Película**
+- **Como** usuario autenticado,  
+- **Quiero** visualizar todas las copias disponibles de una película en particular,  
+- **Para** decidir si me interesa adquirirla o intercambiar con otro usuario.
 
-- **Como** usuario
-- **Quiero** añadir detalles como el estado o formato de mis copias
-- **Para** tener un registro completo y actualizado.
+---
 
-### 🔑 **Autenticación**
+### 🔑 **Autenticación y Registro**
+#### **Inicio de Sesión**
+- **Como** visitante,  
+- **Quiero** iniciar sesión con mi nombre de usuario y contraseña,  
+- **Para** acceder a funcionalidades exclusivas como la gestión de mi colección personal.
 
-- **Como** visitante
-- **Quiero** iniciar sesión con mi nombre de usuario y contraseña
-- **Para** acceder a funcionalidades protegidas.
+#### **Cerrar Sesión**
+- **Como** usuario autenticado,  
+- **Quiero** cerrar sesión de manera segura,  
+- **Para** proteger mi información personal y garantizar que otros no accedan a mi cuenta.
 
-- **Como** visitante
-- **Quiero** registrarme en la plataforma
-- **Para** empezar a gestionar mi colección de películas.
+#### **Registro de Usuario**
+- **Como** visitante,  
+- **Quiero** registrarme en la plataforma proporcionando mis datos básicos,  
+- **Para** empezar a gestionar mi propia colección de películas.
+
+---
 
 ### 📧 **Contacto**
+#### **Enviar Mensaje al Administrador**
+- **Como** usuario autenticado o visitante,  
+- **Quiero** rellenar un formulario de contacto con mi nombre, correo electrónico y mensaje,  
+- **Para** comunicarme con el administrador del sistema en caso de dudas, sugerencias o problemas.
 
-- **Como** usuario
-- **Quiero** enviar un mensaje a través del formulario de contacto
-- **Para** resolver dudas o hacer sugerencias.
+---
+
+### 🎯 **Escenarios Especiales**
+#### **Película no Disponible**
+- **Como** usuario autenticado,  
+- **Quiero** recibir un mensaje claro cuando intento acceder a una película que no existe en el sistema,  
+- **Para** entender que el contenido no está disponible y evitar confusiones.
+
+#### **Credenciales Incorrectas**
+- **Como** visitante,  
+- **Quiero** recibir una notificación si ingreso un usuario o contraseña incorrectos,  
+- **Para** saber que necesito verificar mis datos antes de volver a intentarlo.
 
 ---
 
